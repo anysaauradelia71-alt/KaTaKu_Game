@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATAKU - Kumpulan Tanya Katak Lucu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- AUDIO ELEMENT (Nama file diubah agar aman di GitHub) -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music-1.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="game-container">
+        
+        <!-- SCREEN 1: HALAMAN UTAMA -->
+        <div id="screen-main" class="screen active">
+            <div class="top-controls">
+                <button id="btn-audio" class="icon-btn mute" onclick="toggleAudio()"></button>
+            </div>
+            <div class="title-container">
+                <h1 class="main-title"><span class="red">K</span><span class="orange">A</span><span class="green">T</span><span class="orange">A</span><span class="blue">K</span><span class="yellow">U</span></h1>
+                <p class="sub-title">Kumpulan Tanya Katak Lucu</p>
+            </div>
+            <div class="character-container">
+                <img src="assets/karakter-katak-1.png" alt="Frog" class="frog-main">
+            </div>
+            <!-- onclick dihapus karena navigasi & fullscreen akan dihandle via Event Listener di script.js -->
+            <button class="btn-start">Mulai</button>
+        </div>
+
+        <!-- SCREEN 2: PILIHAN LEVEL -->
+        <div id="screen-level" class="screen">
+            <button class="back-btn" onclick="navigateTo('screen-main')">←</button>
+            
+            <h2 class="level-title">Level Berapakah Kamu?</h2>
+            
+            <div class="level-options">
+                <button class="btn-level" onclick="selectLevel('kecebong')">Kecebong</button>
+                <button class="btn-level" onclick="selectLevel('katak')">Katak</button>
+            </div>
+            <img src="assets/karakter-katak-1.png" alt="Frog" class="frog-level">
+        </div>
+
+        <!-- SCREEN 3: HALAMAN KUIS -->
+        <div id="screen-quiz" class="screen">
+            <div class="quiz-header">
+                <!-- Diarahkan ke resetGame atau fungsi khusus keluar kuis agar timer berhenti -->
+                <button class="back-btn" onclick="resetGame()">←</button>
+                
+                <div class="heart-container">
+                    <span id="heart-text">❤️ x5</span>
+                </div>
+            </div>
+
+            <div class="quiz-area">
+                <div class="frog-quiz-container">
+                    <img id="frog-game" src="assets/karakter-katak-1.png" alt="Frog" class="frog-quiz">
+                </div>
+                <div class="bubble-speech">
+                    <p id="question-text">PERTANYAAN</p>
+                </div>
+            </div>
+
+            <div class="answers-container">
+                <button class="answer-card" onclick="checkAnswer('A')">Pilihan A</button>
+                <button class="answer-card" onclick="checkAnswer('B')">Pilihan B</button>
+                <button class="answer-card" onclick="checkAnswer('C')">Pilihan C</button>
+            </div>
+
+            <div class="quiz-footer">
+                <div class="timer-box">⏱️ <span id="timer-text">00:40</span></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 4: HALAMAN SKOR -->
+        <div id="screen-score" class="screen">
+            <button class="home-btn-top" onclick="resetGame()">🏠</button>
+            <h2 class="score-title">POIN KAMU!!</h2>
+            
+            <div class="frog-score-container">
+                <img id="frog-end" src="assets/karakter-katak-2.png" alt="Frog" class="frog-score happy-jump">
+            </div>
+
+            <div class="score-board">
+                <h1 id="final-score">250</h1>
+                <div class="heart-row" id="final-hearts">
+                    <!-- Dinamis via JS -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
