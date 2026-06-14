@@ -435,7 +435,7 @@ body {
 
 .title-container {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 45px;
 }
 .main-title {
     font-size: 5rem;
@@ -454,8 +454,8 @@ body {
 /* UKURAN KATAK HALAMAN UTAMA */
 .character-container {
     position: absolute;
-    bottom: -10px;
-    left: 1px;
+    bottom: -50px;
+    left: -25px;
 }
 .frog-main { 
     width: 600px; 
@@ -465,7 +465,7 @@ body {
 .btn-start {
     position: absolute;
     bottom: 160px;
-    right: 160px;
+    right: 100px;
     background-color: #649c3c;
     color: white;
     padding: 12px 65px;
