@@ -370,154 +370,28 @@ body {
 }
 
 /* --- PENYESUAIAN UNTUK LAYAR HANDPHONE (RESPONSIF) --- */
-@media (max-width: 768px) {
-    body {
-        padding: 0;
-        height: 100vh;
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .title-container {
+        margin-top: 100px !important; /* Paksa posisi turun */
+        text-align: center !important;
     }
 
-    .game-container {
-        width: 100%;
-        height: 100vh; /* Menggunakan vh penuh agar tidak terpotong tombol bawah */
-        max-height: 100vh;
-        border-radius: 0px; /* Fullscreen hp tidak butuh melengkung di luar */
-    }
-
-    /* Memastikan screen di mobile bisa scroll tipis jika konten vertikal kepanjangan */
-    .screen {
-        overflow-y: auto;
-        padding-bottom: 30px;
-    }
-
-    /* SCREEN 1: HALAMAN UTAMA */
-    .main-title {
-        font-size: 3.5rem; 
-    }
-    .sub-title {
-        font-size: 1.2rem;
-    }
-    .character-container {
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .frog-main {
-        width: 100%; 
-        max-width: 340px;
-    }
     .btn-start {
-        right: 50%;
-        transform: translateX(50%); 
-        bottom: 30px;
-        font-size: 1.8rem;
-        padding: 10px 40px;
-        white-space: nowrap;
+        position: absolute !important;
+        top: 50% !important; /* Paksa ke tengah */
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 10 !important;
     }
 
-    /* SCREEN 2: PILIHAN LEVEL */
-    .level-title {
-        font-size: 2.2rem;
-        margin-top: 60px;
-    }
-    .level-options {
-        flex-direction: column; 
-        gap: 15px;
-        padding: 0 40px;
-        margin-top: 30px;
-    }
-    .btn-level {
-        font-size: 1.6rem;
-        padding: 10px 20px;
-        width: 100%;
-    }
-    .frog-level {
-        width: 100%;
-        max-width: 250px;
-        bottom: 0;
+    .character-container {
+        position: absolute !important;
+        bottom: 20px !important; /* Paksa katak ke bawah */
+        left: 15px !important;
     }
 
-    /* SCREEN 3: GAMEPLAY KUIS */
-    .quiz-area {
-        flex-direction: column; 
-        align-items: center;
-        padding-left: 0;
-        margin-top: 10px;
-        gap: 10px;
-    }
-    .frog-quiz-container {
-        width: 140px;
-        height: 110px;
-    }
-    .frog-quiz {
-        width: 160px;
-    }
-    .bubble-speech {
-        font-size: 1.2rem;
-        padding: 15px 20px;
-        max-width: 90%;
-        min-width: 80%;
-        margin-left: 0;
-        border-radius: 20px;
-    }
-    .bubble-speech:after {
-        left: 50%;
-        top: -20px;
-        border-right-color: transparent;
-        border-bottom-color: #649c3c;
-        margin-left: -10px;
-        margin-top: 0;
-    }
-    .answers-container {
-        flex-direction: column; 
-        gap: 10px;
-        margin-top: 20px;
-        padding: 0 30px;
-    }
-    .answer-card {
-        width: 100%;
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-    .quiz-footer {
-        position: relative;
-        margin-top: 15px;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-    }
-    .timer-box {
-        display: inline-block;
-        font-size: 1rem;
-        padding: 5px 15px;
-    }
-    .back-btn {
-        font-size: 2.2rem;
-    }
-    .heart-container {
-        top: 15px;
-        right: 15px;
-        padding: 4px 10px;
-    }
-    #heart-text {
-        font-size: 1.2rem;
-    }
-
-    /* SCREEN 4: HALAMAN SKOR */
-    .score-title {
-        font-size: 2.5rem;
-    }
-    .frog-score {
-        width: 220px;
-    }
-    .score-board {
-        width: 85%;
-        padding: 15px;
-    }
-    .score-board h1 {
-        font-size: 4.5rem;
-    }
-    .heart-row {
-        font-size: 1.5rem;
+    .frog-main {
+        width: 160px !important; /* Paksa katak mengecil */
+        height: auto !important;
     }
 }
