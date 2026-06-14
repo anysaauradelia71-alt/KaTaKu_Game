@@ -409,7 +409,7 @@ body {
 /* SCREEN 1: MAIN MENU */
 #screen-main {
     /* PERBAIKAN: Spasi dihapus agar aman di GitHub Pages */
-    background-image: url('assets/image-background-1.jpeg');
+    background-image: url('assets/BG-1.jpeg');
 }
 
 .top-controls {
@@ -479,7 +479,7 @@ body {
 /* SCREEN 2: PILIHAN LEVEL */
 #screen-level {
     /* PERBAIKAN: Spasi dihapus agar aman di GitHub Pages */
-    background-image: url('assets/image-background-1.jpeg');
+    background-image: url('assets/BG-1.jpeg');
     text-align: center;
 }
 .level-title {
@@ -528,7 +528,7 @@ body {
 /* SCREEN 3: GAMEPLAY KUIS */
 #screen-quiz {
     /* PERBAIKAN: Spasi dihapus agar aman di GitHub Pages */
-    background-image: url('assets/BG-1.jpeg');
+    background-image: url('assets/BG-2.jpeg');
 }
 .quiz-header {
     width: 100%;
